@@ -1,0 +1,119 @@
+[
+  {
+    "id": 1,
+    "numero": "0801234-56.2024.8.10.0001",
+    "status": "Concluso para Decisão",
+    "classe": "Procedimento Comum Cível",
+    "partes": [
+      "Maria Silva",
+      "Banco Financeiro S/A"
+    ],
+    "valorCausa": 75000.5,
+    "juiz": "Dr. Roberto Mendes"
+  },
+  {
+    "id": 2,
+    "numero": "0805555-21.2023.8.10.0001",
+    "status": "Em Análise",
+    "classe": "Busca e Apreensão em Alienação Fiduciária",
+    "partes": [
+      "João Pereira",
+      "Consórcio Nacional XYZ"
+    ],
+    "valorCausa": 45000,
+    "juiz": "Dra. Ana Costa"
+  },
+  {
+    "id": 3,
+    "numero": "0809876-90.2024.8.10.0002",
+    "status": "Aguardando Cumprimento",
+    "classe": "Execução de Título Extrajudicial",
+    "partes": [
+      "Empresa ABC Ltda",
+      "Fornecedora de Peças S.A"
+    ],
+    "valorCausa": 120300.75,
+    "juiz": "Dr. Roberto Mendes"
+  },
+  {
+    "id": 4,
+    "numero": "0801122-33.2024.8.10.0001",
+    "status": "Arquivado",
+    "classe": "Mandado de Segurança Cível",
+    "partes": [
+      "Carlos Souza",
+      "Secretaria de Estado da Fazenda"
+    ],
+    "valorCausa": 0,
+    "juiz": "Dra. Ana Costa"
+  },
+  {
+    "id": 5,
+    "numero": "0812345-67.2022.8.10.0002",
+    "status": "Em Análise",
+    "classe": "Ação de Cobrança",
+    "partes": [
+      "Paulo Lima",
+      "Construtora Vale S/A"
+    ],
+    "valorCausa": 60000,
+    "juiz": "Dr. Roberto Mendes"
+  },
+  {
+    "numero": "9999999-99.9999.9.99.9999",
+    "classe": "Ação de Cobrança",
+    "partes": [
+      "Lula",
+      "Bolsonaro"
+    ],
+    "valorCausa": 765000,
+    "status": "Pendente",
+    "juiz": "Alexandre de Moraes",
+    "id": 6
+  },
+  {
+    "numero": "1289381-92.8391.2.83.9128",
+    "classe": "Ação de Cobrança",
+    "partes": [
+      "Lula",
+      "Bolsonaro"
+    ],
+    "valorCausa": 25,
+    "status": "Nunca será pago",
+    "juiz": "Alexandre de Moraes",
+    "destinatarioEmail": "ericvictorscosta@gmail.com",
+    "destinatarioWhatsapp": "98991138910",
+    "userId": "4zd5QAi5JhQcX0HR0aLBm00p73d2",
+    "id": 8
+  },
+  {
+    "numero": "5739481-89.1283.9.21.8381",
+    "classe": "Imposto Tributário",
+    "partes": [
+      "Gabriel",
+      "Lucas"
+    ],
+    "valorCausa": 50000,
+    "status": "Nunca será pago",
+    "juiz": "Alexandre de Moraes",
+    "destinatarioEmail": "ericvictorscosta@gmail.com",
+    "destinatarioWhatsapp": "98991138910",
+    "userId": "4zd5QAi5JhQcX0HR0aLBm00p73d2",
+    "id": 9
+  },
+  {
+    "numero": "8949382-43.8294.8.32.9849",
+    "classe": "Imposto Digital",
+    "partes": [
+      "João Frederico",
+      "Carlos Alberto"
+    ],
+    "valorCausa": 30400,
+    "status": "Pendente",
+    "juiz": "Dr. Francisco James",
+    "destinatarioEmail": "ericvictorscosta@gmail.com",
+    "destinatarioWhatsapp": "98991138910",
+    "userId": "4zd5QAi5JhQcX0HR0aLBm00p73d2",
+    "id": 10
+  }
+]
