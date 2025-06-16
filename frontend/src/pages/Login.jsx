@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { auth } from '../firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate, Link } from 'react-router-dom';
+import logoTJ from '../../public/logo.png';
 
 export default function Login() {
   const [form, setForm] = useState({ email: '', senha: '' });
@@ -24,6 +25,9 @@ export default function Login() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-slate-100">
       <form onSubmit={handleSubmit} className="bg-white rounded shadow-lg p-8 w-full max-w-md space-y-6">
+        <div className="flex flex-col items-center">
+          <img src={logoTJ} alt="Logo TJMA" className="h-16 mb-2" />
+        </div>
         <h2 className="text-2xl font-bold text-blue-700 mb-4 text-center">Login</h2>
         {erro && <div className="bg-red-100 text-red-700 p-2 rounded">{erro}</div>}
         <input

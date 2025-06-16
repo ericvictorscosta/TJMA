@@ -25,13 +25,12 @@ exports.gerarDocumento = (req, res) => {
       res.send(pdfData);
     });
 
-    // Logotipo (opcional, coloque um arquivo logo.png em backend/src)
-    const logoPath = path.join(__dirname, '../logo.png');
+    // Logotipo (opcional, coloque um arquivo logo_tj.png em backend/src)
+    const logoPath = path.join(__dirname, '../logo_tj.png');
     if (fs.existsSync(logoPath)) {
       doc.image(logoPath, doc.page.width / 2 - 40, 30, { width: 80 });
     }
-
-    doc.moveDown(logoPath ? 2 : 4);
+    doc.moveDown(fs.existsSync(logoPath) ? 2 : 4);
 
     // Título centralizado
     doc

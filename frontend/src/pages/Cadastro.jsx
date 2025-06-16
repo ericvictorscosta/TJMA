@@ -4,6 +4,7 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { db } from '../firebase';
 import { doc, setDoc } from 'firebase/firestore';
 import { useNavigate, Link } from 'react-router-dom';
+import logoTJ from '../../public/logo.png';
 
 const perfis = [
   { value: 'administrador', label: 'Administrador' },
@@ -55,6 +56,9 @@ export default function Cadastro() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-slate-100">
       <form onSubmit={handleSubmit} className="bg-white rounded shadow-lg p-8 w-full max-w-lg space-y-5">
+        <div className="flex flex-col items-center">
+          <img src={logoTJ} alt="Logo TJMA" className="h-16 mb-2" />
+        </div>
         <h2 className="text-2xl font-bold text-blue-700 mb-4 text-center">Cadastro</h2>
         {erro && <div className="bg-red-100 text-red-700 p-2 rounded">{erro}</div>}
         {sucesso && <div className="bg-green-100 text-green-700 p-2 rounded">{sucesso}</div>}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Gavel, LayoutDashboard, FileText, BarChart2, Settings } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
+import logoTJ from '../../public/tjma.png';
 
 const navItems = [
   { to: '/', label: 'Dashboard', icon: <LayoutDashboard size={20} /> },
@@ -12,9 +13,8 @@ const navItems = [
 export default function Sidebar() {
   return (
     <aside className="w-64 bg-white border-r border-slate-200 flex flex-col min-h-screen shadow-lg">
-      <div className="flex items-center gap-3 px-6 py-6 border-b border-slate-200">
-        <Gavel size={32} className="text-blue-700" />
-        <span className="font-bold text-xl text-slate-800">TJMA</span>
+      <div className="flex flex-col items-center gap-3 px-6 py-6 border-b border-slate-200">
+        <img src={logoTJ} alt="Logo TJMA" className="h-16 mb-2" />
       </div>
       <nav className="flex-1 py-6">
         <ul className="space-y-1">

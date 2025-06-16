@@ -31,7 +31,9 @@ export default function Header() {
 
   return (
     <header className="bg-blue-700 px-8 py-4 border-b border-slate-200 flex items-center justify-between shadow-sm">
-      <h1 className="text-2xl font-semibold text-white tracking-tight">Painel de Gestão Judicial</h1>
+      <div className="flex items-center gap-4">
+        <h1 className="text-2xl font-semibold text-white tracking-tight">Painel de Gestão Judicial</h1>
+      </div>
       <div className="flex items-center gap-4">
         <img
           src={`https://ui-avatars.com/api/?name=${encodeURIComponent(nomeUsuario)}&background=1d4ed8&color=fff`}
