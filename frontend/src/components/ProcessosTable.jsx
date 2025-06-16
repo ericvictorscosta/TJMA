@@ -11,14 +11,14 @@ export default function ProcessosTable({ refresh, userId }) {
 
   useEffect(() => {
     if (!userId) return;
-    axios.get(`http://localhost:3001/api/processos?userId=${userId}`).then(resp => setProcessos(resp.data));
+    axios.get(`${import.meta.env.VITE_API_URL}/processos?userId=${userId}`).then(resp => setProcessos(resp.data));
   }, [refresh, userId]);
 
   const handleGerarAlvara = async (processoId) => {
     setLoadingId(processoId);
     try {
       const response = await axios.post(
-        'http://localhost:3001/api/gerar-documento',
+        `${import.meta.env.VITE_API_URL}/gerar-documento`,
         { id: processoId },
         { responseType: 'blob' }
       );
@@ -45,7 +45,7 @@ export default function ProcessosTable({ refresh, userId }) {
     setDeletingId(processoId);
     setShowConfirm(false);
     try {
-      await axios.delete(`http://localhost:3001/api/processos/${processoId}`);
+      await axios.delete(`${import.meta.env.VITE_API_URL}/processos/${processoId}`);
       setProcessos(processos => processos.filter(p => p.id !== processoId));
     } catch {
       alert('Erro ao excluir o processo.');

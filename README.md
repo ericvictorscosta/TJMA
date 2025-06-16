@@ -1,10 +1,44 @@
 # Painel de Gestão e Automação Judicial
 
-Uma aplicação full-stack simulando um painel de controle para uma vara judicial, composta por:
+## Descrição
 
-- **Front-end:** React + Vite + TailwindCSS
-- **Back-end:** Node.js + Express
-- **Microserviço:** Java (Geração de PDF via linha de comando)
+Este projeto é uma solução full-stack para gerenciamento de processos judiciais, simulando um painel de controle para uma vara judicial. Ele permite o cadastro, acompanhamento, análise estatística e geração automatizada de documentos (alvarás em PDF) de processos judiciais. O sistema é modular, escalável e preparado para integrações futuras, como notificações automáticas e webhooks.
+
+## Tecnologias Utilizadas
+
+- **Front-end:**  
+  - React  
+  - Vite  
+  - TailwindCSS  
+  - Chart.js, Recharts (gráficos)  
+  - Firebase (autenticação e Firestore)  
+  - EmailJS (envio de e-mails)
+
+- **Back-end:**  
+  - Node.js  
+  - Express  
+  - PostgreSQL (opcional, para persistência)  
+  - Firebase Admin SDK  
+  - Integração com microserviço Java via linha de comando
+
+- **Microserviço Java:**  
+  - Java 17+  
+  - Maven  
+  - OpenPDF (geração de PDF)  
+  - Gson (serialização JSON)
+
+- **Infraestrutura:**  
+  - Deploy do front-end na Vercel  
+  - Backend rodando localmente ou em servidor próprio
+
+## Funcionalidades Principais
+
+- Cadastro e autenticação de usuários (com diferentes perfis)
+- Cadastro, listagem, exclusão e análise de processos judiciais
+- Geração automática de documentos PDF (alvará) via microserviço Java
+- Visualização de estatísticas e gráficos dos processos
+- Integração com e-mail e WhatsApp para notificações (via webhooks)
+- Interface moderna, responsiva e fácil de usar
 
 ## Estrutura de Diretórios
 

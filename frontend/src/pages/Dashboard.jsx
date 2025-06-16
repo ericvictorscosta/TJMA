@@ -18,7 +18,7 @@ export default function Dashboard() {
 
   useEffect(() => {
     if (!user) return;
-    axios.get(`http://localhost:3001/api/stats?userId=${user.uid}`).then(resp => setStats(resp.data));
+    axios.get(`${import.meta.env.VITE_API_URL}/stats?userId=${user.uid}`).then(resp => setStats(resp.data));
   }, [user]);
 
   return (

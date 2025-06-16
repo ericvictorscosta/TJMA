@@ -51,7 +51,7 @@ export default function Processos() {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:3001/api/processos', {
+      await axios.post(`${import.meta.env.VITE_API_URL}/processos`, {
         ...form,
         partes: form.partes.split(',').map(p => p.trim()),
         valorCausa: Number(form.valorCausa),

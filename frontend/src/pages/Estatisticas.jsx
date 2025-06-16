@@ -22,7 +22,7 @@ export default function Estatisticas() {
 
   useEffect(() => {
     if (!user) return;
-    axios.get(`http://localhost:3001/api/processos?userId=${user.uid}`)
+    axios.get(`${import.meta.env.VITE_API_URL}/processos?userId=${user.uid}`)
       .then(res => {
         const processos = res.data;
         setProcessos(processos);
