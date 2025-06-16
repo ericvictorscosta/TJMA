@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Loader2, FileDown, Trash2 } from 'lucide-react';
+import { API_BASE_URL } from '../utils/api';
 
 export default function ProcessosTable({ refresh, userId }) {
   const [processos, setProcessos] = useState([]);
@@ -11,14 +12,14 @@ export default function ProcessosTable({ refresh, userId }) {
 
   useEffect(() => {
     if (!userId) return;
-    axios.get(`${import.meta.env.VITE_API_URL}/processos?userId=${userId}`).then(resp => setProcessos(resp.data));
+    axios.get(`${API_BASE_URL}/api/processos?userId=${userId}`).then(resp => setProcessos(resp.data));
   }, [refresh, userId]);
 
   const handleGerarAlvara = async (processoId) => {
     setLoadingId(processoId);
     try {
       const response = await axios.post(
-        `${import.meta.env.VITE_API_URL}/gerar-documento`,
+        `${API_BASE_URL}/api/gerar-documento`,
         { id: processoId },
         { responseType: 'blob' }
       );
@@ -45,7 +46,7 @@ export default function ProcessosTable({ refresh, userId }) {
     setDeletingId(processoId);
     setShowConfirm(false);
     try {
-      await axios.delete(`${import.meta.env.VITE_API_URL}/processos/${processoId}`);
+      await axios.delete(`${API_BASE_URL}/api/processos/${processoId}`);
       setProcessos(processos => processos.filter(p => p.id !== processoId));
     } catch {
       alert('Erro ao excluir o processo.');

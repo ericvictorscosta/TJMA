@@ -5,6 +5,7 @@ import ProcessosTable from '../components/ProcessosTable';
 import axios from 'axios';
 import { auth, db } from '../firebase';
 import { collection, addDoc } from 'firebase/firestore';
+import { API_BASE_URL } from '../utils/api';
 
 function maskNumeroProcesso(value) {
   value = value.replace(/\D/g, '');
@@ -51,7 +52,7 @@ export default function Processos() {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      await axios.post(`${import.meta.env.VITE_API_URL}/processos`, {
+      await axios.post(`${API_BASE_URL}/api/processos`, {
         ...form,
         partes: form.partes.split(',').map(p => p.trim()),
         valorCausa: Number(form.valorCausa),

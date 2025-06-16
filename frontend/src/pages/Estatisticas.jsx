@@ -7,6 +7,7 @@ import { Chart, BarElement, CategoryScale, LinearScale, ArcElement, Tooltip, Leg
 import DashboardEstatisticas from '../components/DashboardEstatisticas';
 import { auth } from '../firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { API_BASE_URL } from '../utils/api';
 
 Chart.register(BarElement, CategoryScale, LinearScale, ArcElement, Tooltip, Legend);
 
@@ -22,7 +23,7 @@ export default function Estatisticas() {
 
   useEffect(() => {
     if (!user) return;
-    axios.get(`${import.meta.env.VITE_API_URL}/processos?userId=${user.uid}`)
+    axios.get(`${API_BASE_URL}/api/processos?userId=${user.uid}`)
       .then(res => {
         const processos = res.data;
         setProcessos(processos);

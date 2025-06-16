@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { auth } from '../firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { API_BASE_URL } from '../utils/api';
 
 export default function Dashboard() {
   const [stats, setStats] = useState({
@@ -18,7 +19,7 @@ export default function Dashboard() {
 
   useEffect(() => {
     if (!user) return;
-    axios.get(`${import.meta.env.VITE_API_URL}/stats?userId=${user.uid}`).then(resp => setStats(resp.data));
+    axios.get(`${API_BASE_URL}/api/stats?userId=${user.uid}`).then(resp => setStats(resp.data));
   }, [user]);
 
   return (
